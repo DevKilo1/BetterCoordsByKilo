@@ -81,3 +81,9 @@ TriggerEvent('chat:addSuggestion', '/vec4', "Add 'cs' for the C# version. Exampl
 		help = "cs"
 	}
 })
+
+if Config.EnableKeyMappings then
+    RegisterKeyMapping("vec2", "Add 'cs' for the C# version. Example Usage:  '/vec2 cs'", "keyboard", Config.DefaultKeyMappings["vec2"] or "L")
+    RegisterKeyMapping("vec3", "Add 'cs' for the C# version. Example Usage:  '/vec3 cs'", "keyboard", Config.DefaultKeyMappings["vec3"] or "K")
+    RegisterKeyMapping("vec4", "Add 'cs' for the C# version. Example Usage:  '/vec4 cs'", "keyboard", Config.DefaultKeyMappings["vec4"] or "J")
+end
