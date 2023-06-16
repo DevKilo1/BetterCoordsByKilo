@@ -11,3 +11,11 @@ My own take at a coordinate clipboard script. I had my grievances... Credits to 
   <br>
   <p>Add 'cs' to the end to your command to copy the C# version of the coordinates! <br>Usage Example: "/vec3 cs"</p>
 </div>
+
+<div>
+  <h2>Permissions</h2>
+  <p>
+    The commands are restricted by default. You can change this in the client.lua file. Just change "true" to "false" at the bottom of each RegisterCommand.<br>
+    Permissions: command.vec2, command.vec3, command.vec4
+  </p>
+</div>
