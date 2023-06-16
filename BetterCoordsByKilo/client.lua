@@ -86,4 +86,14 @@ if Config.EnableKeyMappings then
     RegisterKeyMapping("vec2", "Add 'cs' for the C# version. Example Usage:  '/vec2 cs'", "keyboard", Config.DefaultKeyMappings["vec2"] or "L")
     RegisterKeyMapping("vec3", "Add 'cs' for the C# version. Example Usage:  '/vec3 cs'", "keyboard", Config.DefaultKeyMappings["vec3"] or "K")
     RegisterKeyMapping("vec4", "Add 'cs' for the C# version. Example Usage:  '/vec4 cs'", "keyboard", Config.DefaultKeyMappings["vec4"] or "J")
+
+    if Config.DefaultKeyMappings["vec2 cs"] ~= "" then
+        RegisterKeyMapping("vec2 cs", "", "keyboard", Config.DefaultKeyMappings["vec2 cs"])
+    end
+    if Config.DefaultKeyMappings["vec3 cs"] ~= "" then
+        RegisterKeyMapping("vec3 cs", "", "keyboard", Config.DefaultKeyMappings["vec3 cs"])
+    end
+    if Config.DefaultKeyMappings["vec4 cs"] ~= "" then
+        RegisterKeyMapping("vec4 cs", "", "keyboard", Config.DefaultKeyMappings["vec4 cs"])
+    end
 end
