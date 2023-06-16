@@ -9,5 +9,5 @@ My own take at a coordinate clipboard script. I had my grievances... Credits to 
     /vec4
   </p>
   <br>
-  <p>Add 'cs' to the end to your command to copy the C# version of the coordinates! <br> Example: "/vec3 cs"</p>
+  <p>Add 'cs' to the end to your command to copy the C# version of the coordinates! <br>Usage Example: "/vec3 cs"</p>
 </div>
