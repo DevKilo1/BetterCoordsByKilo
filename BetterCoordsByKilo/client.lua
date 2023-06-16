@@ -23,7 +23,7 @@ RegisterCommand('vec2', function(source, args)
         ShowNotificationTicker('Copied to clipboard! ' .. vec(coords.x, coords.y))
     end
     
-end,true)
+end,false)
 
 RegisterCommand('vec3', function(source, args)
     if args[1] == 'cs' then
@@ -42,7 +42,7 @@ RegisterCommand('vec3', function(source, args)
         ShowNotificationTicker('Copied to clipboard! ' .. vec(coords.x, coords.y,coords.z))    
     end
     
-end,true)
+end,false)
 
 RegisterCommand('vec4', function(source, args)
     if args[1] == 'cs' then
@@ -61,7 +61,7 @@ RegisterCommand('vec4', function(source, args)
         ShowNotificationTicker('Copied to clipboard! ' .. vec(coords.x, coords.y,coords.z,heading))
     end
 
-end,true)
+end,false)
 
 TriggerEvent('chat:addSuggestion', '/vec2', "Add 'cs' for the C# version. Example Usage:  '/vec2 cs'", {
 	{
