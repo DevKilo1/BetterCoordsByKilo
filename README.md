@@ -4,8 +4,8 @@ My own take at a coordinate clipboard script. I had my grievances... Credits to 
 <div>
   <h3>Commands</h3>
   <p>
-    /vec2
-    /vec3
+    /vec2 <br>
+    /vec3 <br>
     /vec4
   </p>
   <br>
