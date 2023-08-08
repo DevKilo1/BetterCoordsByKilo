@@ -1,0 +1,27 @@
+[
+	{
+		"isEnabled": true,
+		"name": "Mission Row PD",
+		"markerLocation": {
+			"x": 442.25622558594,
+			"y": -995.77874755859,
+			"z": 21.336015701294
+		},
+		"spawnLocation": {
+			"x": 417.45257568359,
+			"y": -1006.1844482422,
+			"z": 21.336019515991,
+			"w": 268.95791625977
+		},
+		"dropOffLocation": {
+			"x": 415.25759887695,
+			"y": -997.89276123047,
+			"z": 21.336023330688
+		},
+		"isAvailableForEveryone": false,
+		"useRanks": false,
+		"availableForRanks": ["Officer I"],
+		"availableForDepartments": [1],
+		"vehicles": []
+	}
+]

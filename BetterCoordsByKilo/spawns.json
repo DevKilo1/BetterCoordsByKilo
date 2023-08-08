@@ -1,0 +1,11 @@
+{
+  "MRPD": {
+    "departmentIDs": [1],
+    "spawnPosition": {
+      "x": 415.4137,
+      "y": -991.465,
+      "z": 29.39233
+    },
+    "disclaimer": "You must add `./config/spawns.json` to the files section of the fivepd fxmanifest.lua for the plugin to be able to load this"
+  }
+}

@@ -14,6 +14,14 @@ RegisterCommand('vec2', function(source, args)
             data = 'new Vector2(' .. coords.x.. 'f, '.. coords.y..'f)'
         })
     ShowNotificationTicker('Copied to clipboard! ' .. 'new Vector2(' .. coords.x.. 'f, '.. coords.y..'f)')
+        elseif args[1] == "json" then
+        local coords = GetEntityCoords(PlayerPedId())
+        SendNUIMessage({
+            type = 'clipboard',
+            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..'\n }'
+        })
+        ShowNotificationTicker('Copied to clipboard! ' .. '{ ["x"] = '.. coords.x..', ["y"] = '..coords.y..' }')
+        
     else
         local coords = GetEntityCoords(PlayerPedId())
         SendNUIMessage({
@@ -32,7 +40,14 @@ RegisterCommand('vec3', function(source, args)
             type = 'clipboard',
             data = 'new Vector3(' .. coords.x.. 'f, '.. coords.y..'f, '..coords.z..'f)'
         })
-        ShowNotificationTicker('Copied to clipboard! ' .. 'new Vector3(' .. coords.x.. 'f, '.. coords.y..'f, '..coords.z..'f)')    
+        ShowNotificationTicker('Copied to clipboard! ' .. 'new Vector3(' .. coords.x.. 'f, '.. coords.y..'f, '..coords.z..'f)')
+    elseif args[1] == "json" then
+        local coords = GetEntityCoords(PlayerPedId())
+        SendNUIMessage({
+            type = 'clipboard',
+            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..'\n }'
+        })
+        ShowNotificationTicker('Copied to clipboard! ' .. '{ ["x"] = '.. coords.x..', ["y"] = '..coords.y..', ["z"] = '..coords.z..' }')
     else
         local coords = GetEntityCoords(PlayerPedId())
         SendNUIMessage({
@@ -52,6 +67,13 @@ RegisterCommand('vec4', function(source, args)
             data = 'new Vector4(' .. coords.x.. 'f, '.. coords.y..'f, '..coords.z..'f, '..heading..'f)'
         })
         ShowNotificationTicker('Copied to clipboard! ' .. 'new Vector4(' .. coords.x.. 'f, '.. coords.y..'f, '..coords.z..'f, '..heading..'f)')
+    elseif args[1] == "json" then
+        local coords = GetEntityCoords(PlayerPedId())
+        SendNUIMessage({
+            type = 'clipboard',
+            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..',\n["w"] = '..GetEntityHeading(PlayerPedId())..' }'
+        })
+        ShowNotificationTicker('Copied to clipboard! ' .. '{ ["x"] = '.. coords.x..', ["y"] = '..coords.y..', ["z"] = '..coords.z..', ["w"] = '..GetEntityHeading(PlayerPedId())..' }')
     else
         local coords, heading = GetEntityCoords(PlayerPedId()), GetEntityHeading(PlayerPedId())
         SendNUIMessage({
@@ -82,7 +104,7 @@ TriggerEvent('chat:addSuggestion', '/vec4', "Add 'cs' for the C# version. Exampl
 	}
 })
 
-if Config.EnableKeyMappings then
+if Config.EnableKeyMappings == true then
     RegisterKeyMapping("vec2", "Add 'cs' for the C# version. Example Usage:  '/vec2 cs'", "keyboard", Config.DefaultKeyMappings["vec2"] or "L")
     RegisterKeyMapping("vec3", "Add 'cs' for the C# version. Example Usage:  '/vec3 cs'", "keyboard", Config.DefaultKeyMappings["vec3"] or "K")
     RegisterKeyMapping("vec4", "Add 'cs' for the C# version. Example Usage:  '/vec4 cs'", "keyboard", Config.DefaultKeyMappings["vec4"] or "J")
