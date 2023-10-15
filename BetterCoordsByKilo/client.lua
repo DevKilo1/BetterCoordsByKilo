@@ -18,7 +18,7 @@ RegisterCommand('vec2', function(source, args)
         local coords = GetEntityCoords(PlayerPedId())
         SendNUIMessage({
             type = 'clipboard',
-            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..'\n }'
+            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..' \n}'
         })
         ShowNotificationTicker('Copied to clipboard! ' .. '{ ["x"] = '.. coords.x..', ["y"] = '..coords.y..' }')
         
@@ -45,7 +45,7 @@ RegisterCommand('vec3', function(source, args)
         local coords = GetEntityCoords(PlayerPedId())
         SendNUIMessage({
             type = 'clipboard',
-            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..'\n }'
+            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..' \n}'
         })
         ShowNotificationTicker('Copied to clipboard! ' .. '{ ["x"] = '.. coords.x..', ["y"] = '..coords.y..', ["z"] = '..coords.z..' }')
     else
@@ -71,7 +71,7 @@ RegisterCommand('vec4', function(source, args)
         local coords = GetEntityCoords(PlayerPedId())
         SendNUIMessage({
             type = 'clipboard',
-            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..',\n["w"] = '..GetEntityHeading(PlayerPedId())..' }'
+            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..',\n["w"] = '..GetEntityHeading(PlayerPedId())..' \n}'
         })
         ShowNotificationTicker('Copied to clipboard! ' .. '{ ["x"] = '.. coords.x..', ["y"] = '..coords.y..', ["z"] = '..coords.z..', ["w"] = '..GetEntityHeading(PlayerPedId())..' }')
     else
@@ -88,19 +88,19 @@ end,false)
 TriggerEvent('chat:addSuggestion', '/vec2', "Add 'cs' for the C# version. Example Usage:  '/vec2 cs'", {
 	{
 		name = "args",
-		help = "cs"
+		help = "cs, json"
 	}
 })
 TriggerEvent('chat:addSuggestion', '/vec3', "Add 'cs' for the C# version. Example Usage:  '/vec3 cs'", {
 	{
 		name = "args",
-		help = "cs"
+		help = "cs, json"
 	}
 })
 TriggerEvent('chat:addSuggestion', '/vec4', "Add 'cs' for the C# version. Example Usage:  '/vec4 cs'", {
 	{
 		name = "args",
-		help = "cs"
+		help = "cs, json"
 	}
 })
 
