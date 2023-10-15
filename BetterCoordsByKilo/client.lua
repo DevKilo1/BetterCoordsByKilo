@@ -18,9 +18,9 @@ RegisterCommand('vec2', function(source, args)
         local coords = GetEntityCoords(PlayerPedId())
         SendNUIMessage({
             type = 'clipboard',
-            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..' \n}'
+            data = '{ \n"x": '.. coords.x..',\n"y": '..coords.y..',\n"z": '..coords.z..' \n}'
         })
-        ShowNotificationTicker('Copied to clipboard! ' .. '{ ["x"] = '.. coords.x..', ["y"] = '..coords.y..' }')
+        ShowNotificationTicker('Copied to clipboard! ' .. '{ "x": '.. coords.x..', "y": '..coords.y..' }')
         
     else
         local coords = GetEntityCoords(PlayerPedId())
@@ -45,9 +45,9 @@ RegisterCommand('vec3', function(source, args)
         local coords = GetEntityCoords(PlayerPedId())
         SendNUIMessage({
             type = 'clipboard',
-            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..' \n}'
+            data = '{ \n"x": '.. coords.x..',\n"y": '..coords.y..',\n"z": '..coords.z..' \n}'
         })
-        ShowNotificationTicker('Copied to clipboard! ' .. '{ ["x"] = '.. coords.x..', ["y"] = '..coords.y..', ["z"] = '..coords.z..' }')
+        ShowNotificationTicker('Copied to clipboard! ' .. '{ "x": '.. coords.x..', "y": '..coords.y..', "z": '..coords.z..' }')
     else
         local coords = GetEntityCoords(PlayerPedId())
         SendNUIMessage({
@@ -71,9 +71,9 @@ RegisterCommand('vec4', function(source, args)
         local coords = GetEntityCoords(PlayerPedId())
         SendNUIMessage({
             type = 'clipboard',
-            data = '{ \n["x"] = '.. coords.x..',\n["y"] = '..coords.y..',\n["z"] = '..coords.z..',\n["w"] = '..GetEntityHeading(PlayerPedId())..' \n}'
+            data = '{ \n"x": '.. coords.x..',\n"y": '..coords.y..',\n"z": '..coords.z..',\n"w": '..GetEntityHeading(PlayerPedId())..' \n}'
         })
-        ShowNotificationTicker('Copied to clipboard! ' .. '{ ["x"] = '.. coords.x..', ["y"] = '..coords.y..', ["z"] = '..coords.z..', ["w"] = '..GetEntityHeading(PlayerPedId())..' }')
+        ShowNotificationTicker('Copied to clipboard! ' .. '{ "x": '.. coords.x..', "y": '..coords.y..', "z": '..coords.z..', "w": '..GetEntityHeading(PlayerPedId())..' }')
     else
         local coords, heading = GetEntityCoords(PlayerPedId()), GetEntityHeading(PlayerPedId())
         SendNUIMessage({
